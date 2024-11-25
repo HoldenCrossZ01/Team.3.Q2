@@ -1,12 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
+
 
 public class Movement : MonoBehaviour
 {
+    public float distanceBetween;
+    public GameObject Player;
+    public GameObject Target;
+    public GameObject Enemy;
     public KeyCode left = KeyCode.A, right = KeyCode.D, up = KeyCode.W, down = KeyCode.S, Jump = KeyCode.Space;
     public float speed = 10, jumpHeight = 15;
-
+    private float distance;
     private Rigidbody2D _rb;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +28,8 @@ public class Movement : MonoBehaviour
         //Input.GetKey(); is for HOLDING a key
         //Input.GetKeyDown(); is for PRESSING a key
         //Input.GetKeyUp(); is for RELEASING a key
-
+        distance = Vector2.Distance(transform.position, Enemy.transform.position);
+        
         if (Input.GetKey(left)) //chek for the player holding down the left button
         {
             _rb.velocity = Vector2.left * speed; //get the component to the ri
@@ -44,6 +53,10 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(Jump))
         {
             GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpHeight;
+        }
+        if (distance < distanceBetween)
+        {
+            Destroy(this.gameObject);
         }
 
         // if (Input.GetKeyDown(KeyCode.Y))
