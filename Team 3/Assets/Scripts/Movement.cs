@@ -10,7 +10,6 @@ public class Movement : MonoBehaviour
 {
     public float distanceBetween;
     public GameObject Player;
-    public GameObject Target;
     public GameObject Enemy;
     public KeyCode left = KeyCode.A, right = KeyCode.D, up = KeyCode.W, down = KeyCode.S, Jump = KeyCode.Space;
     public float speed = 10, jumpHeight = 15;
@@ -58,7 +57,7 @@ public class Movement : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
+        
         // if (Input.GetKeyDown(KeyCode.Y))
         //{
         // GetComponent<Rigidbody2D>() .Gravity Scale *= -1; 
