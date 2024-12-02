@@ -512,8 +512,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceBetween: 2
-  Player: {fileID: 1052828881}
-  Enemy: {fileID: 1928606191}
   left: 97
   right: 100
   up: 119
@@ -521,6 +519,7 @@ MonoBehaviour:
   Jump: 0
   speed: 5
   jumpHeight: 10
+  looking: 1
 --- !u!50 &1052828883
 Rigidbody2D:
   serializedVersion: 4
@@ -628,7 +627,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052828881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.87, y: -1.99, z: 0}
+  m_LocalPosition: {x: -3.21, y: -0.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -646,9 +645,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1208455864}
   - component: {fileID: 1208455865}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bad guy
-  m_TagString: Untagged
+  m_TagString: Destroy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -917,7 +916,7 @@ GameObject:
   - component: {fileID: 1807234913}
   m_Layer: 0
   m_Name: testing (1)
-  m_TagString: Untagged
+  m_TagString: Destroy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -935,14 +934,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1807234914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,9 +954,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972445fa3da391847b3ed73132042254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 200
+  target: {fileID: 1052828886}
+  speed: 400
   nextWaypointDistance: 3
+  enemyGFX: {fileID: 1208455864}
 --- !u!58 &1807234915
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1031,9 +1031,9 @@ GameObject:
   - component: {fileID: 1928606194}
   - component: {fileID: 1928606193}
   - component: {fileID: 1928606192}
-  m_Layer: 24
+  m_Layer: 20
   m_Name: enemy
-  m_TagString: Untagged
+  m_TagString: Destroy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

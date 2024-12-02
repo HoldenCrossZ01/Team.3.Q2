@@ -11,6 +11,7 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+    public void gameover("gameover");
 
     //public void LoadSettings("settings")
     //{
