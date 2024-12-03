@@ -10,7 +10,7 @@ public class PlayerMovement1 : MonoBehaviour
 {
    
     public KeyCode left = KeyCode.A, right = KeyCode.D, up = KeyCode.W, down = KeyCode.S;
-    public float speed = 10;
+    public float speed = 4;
     
     private Rigidbody2D _rb;
     // Start is called before the first frame update

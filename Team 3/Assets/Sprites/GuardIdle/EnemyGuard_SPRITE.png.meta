@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e2e27350bcd48d44fa4c178875d03db8
+guid: c8ba785410ad3b34da50e72ace450c8b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,7 +131,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnemyGuard2_0
+      name: EnemyGuard_SPRITE_0
       rect:
         serializedVersion: 2
         x: 0
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a62cc597e3d30d479923fe7ed7f1a6b
-      internalID: 359875464
+      spriteID: cd9b77ddce2ec6a458182295ff657dd4
+      internalID: 830135806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyGuard2_1
+      name: EnemyGuard_SPRITE_1
       rect:
         serializedVersion: 2
         x: 980
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c266526b96cee942a1b898e7133c87f
-      internalID: 925976359
+      spriteID: b6408eb477b516c41b74c267453af19f
+      internalID: -542751583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyGuard2_2
+      name: EnemyGuard_SPRITE_2
       rect:
         serializedVersion: 2
         x: 1960
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e2e7f05ba974df4d82915ea31081b11
-      internalID: -1907688887
+      spriteID: 8df1005442c30ad42832bde331aab6b2
+      internalID: 1809185989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyGuard2_3
+      name: EnemyGuard_SPRITE_3
       rect:
         serializedVersion: 2
         x: 2940
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 061bedb003f5270438469c2158f94ad3
-      internalID: 1565153010
+      spriteID: 3058d00c813a0364a9cb9649bcd9a82f
+      internalID: -1242499618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyGuard2_4
+      name: EnemyGuard_SPRITE_4
       rect:
         serializedVersion: 2
         x: 3920
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7c344807e548a043bca00f0dd82b89b
-      internalID: -1048301802
+      spriteID: 2cd6a318513ec554bb33df99d4864a9d
+      internalID: 433139989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyGuard2_5
+      name: EnemyGuard_SPRITE_5
       rect:
         serializedVersion: 2
         x: 4900
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e01d48b02e836d846a3aac535d169a46
-      internalID: -1788266321
+      spriteID: 19ebfd55d1e25594689b541a802edf9e
+      internalID: -1658308986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyGuard2_6
+      name: EnemyGuard_SPRITE_6
       rect:
         serializedVersion: 2
         x: 5880
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 364227376ce356d43b733d90f05085d1
-      internalID: -406848919
+      spriteID: eba56addea1869048bb040650ff342f4
+      internalID: -915780768
       vertices: []
       indices: 
       edges: []
@@ -288,13 +288,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      EnemyGuard2_2: -1907688887
-      EnemyGuard2_4: -1048301802
-      EnemyGuard2_6: -406848919
-      EnemyGuard2_5: -1788266321
-      EnemyGuard2_3: 1565153010
-      EnemyGuard2_1: 925976359
-      EnemyGuard2_0: 359875464
+      EnemyGuard_SPRITE_1: -542751583
+      EnemyGuard_SPRITE_6: -915780768
+      EnemyGuard_SPRITE_2: 1809185989
+      EnemyGuard_SPRITE_4: 433139989
+      EnemyGuard_SPRITE_3: -1242499618
+      EnemyGuard_SPRITE_0: 830135806
+      EnemyGuard_SPRITE_5: -1658308986
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
