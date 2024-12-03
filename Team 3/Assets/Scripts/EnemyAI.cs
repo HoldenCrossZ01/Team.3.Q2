@@ -2,10 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using Unity.VisualScripting;
+using UnityEngine.Events;
 
 public class EnemyAI : MonoBehaviour
 {
+
+    public UnityEvent onTriggerEnter = new UnityEvent();
+    public UnityEvent onTriggerExit = new UnityEvent();
     public Transform target;
+    public Transform player;
+    public GameObject triangle;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
     public Transform enemyGFX;
@@ -26,13 +33,14 @@ public class EnemyAI : MonoBehaviour
 
         InvokeRepeating("UpdatePath", 0f, .5f);
     }
-    
+
     void UpdatePath()
     {
         if (seeker.IsDone())
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         }
+
     }
     
     void OnPathComplete(Path p)
