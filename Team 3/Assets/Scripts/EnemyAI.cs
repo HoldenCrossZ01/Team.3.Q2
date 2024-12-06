@@ -7,13 +7,22 @@ using System.Runtime.InteropServices.WindowsRuntime;
 public class EnemyAI : MonoBehaviour
 {
     public Transform target;
+    
+    //
     private GameObject player;
     private GameObject pathe;
+    // distance method up
+    private bool hasLineOfSight = false;
+
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
     public Transform enemyGFX;
+    
+    //remove
     public float distanceBetween;
     private float distance;
+    //end remove
+
 
     Path path;
     int currentWaypoint = 0;
@@ -22,7 +31,6 @@ public class EnemyAI : MonoBehaviour
     Seeker seeker;
     Rigidbody2D rb;
 
-    // Start is called before the first frame update
     void Start()
     {
         seeker = GetComponent<Seeker>();
@@ -50,7 +58,6 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (path == null)
@@ -84,8 +91,10 @@ public class EnemyAI : MonoBehaviour
         {
             enemyGFX.localScale = new Vector3(1f, 1f, 1f);
         }
+
+        #region
         distance = Vector2.Distance(transform.position, player.transform.position);
-        if (distance < distanceBetween)
+        if (distance < distanceBetween && hasLineOfSight)
         {
             target = player.transform;
         }
@@ -93,5 +102,7 @@ public class EnemyAI : MonoBehaviour
         {
             target = pathe.transform;
         }
+        #endregion
+
     }
 }
