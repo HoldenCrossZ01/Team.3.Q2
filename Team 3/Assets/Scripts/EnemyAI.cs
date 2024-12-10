@@ -8,20 +8,18 @@ public class EnemyAI : MonoBehaviour
 {
     public Transform target;
     
-    //
     private GameObject player;
     private GameObject pathe;
-    // distance method up
+    [SerializeField] GameObject Cone;
     private bool hasLineOfSight = false;
 
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
     public Transform enemyGFX;
     
-    //remove
+    
     public float distanceBetween;
     private float distance;
-    //end remove
 
 
     Path path;
@@ -91,18 +89,47 @@ public class EnemyAI : MonoBehaviour
         {
             enemyGFX.localScale = new Vector3(1f, 1f, 1f);
         }
-
-        #region
+        else if (rb.velocity.y >= 0.01f)
+        {
+            enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+        }
+        else if (rb.velocity.y <= -0.01f) 
+        {
+            enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+        }
+        
         distance = Vector2.Distance(transform.position, player.transform.position);
         if (distance < distanceBetween && hasLineOfSight)
         {
             target = player.transform;
+            distanceBetween = 7;
+            speed = 1200;
+            Cone.SetActive(false);
+
         }
         if (distance > distanceBetween)
         {
             target = pathe.transform;
+            speed = 600;
+            Cone.SetActive(true);
+            distanceBetween = 3;
         }
-        #endregion
 
+    }
+    private void FixedUpdate()
+    {
+        RaycastHit2D ray = Physics2D.Raycast(transform.position, player.transform.position - transform.position);
+        if (ray.collider != null)
+        {
+            hasLineOfSight = ray.collider.CompareTag("Player");
+            if (hasLineOfSight)
+            {
+                Debug.DrawRay(transform.position, player.transform.position - transform.position, Color.green);
+            }
+            else
+            {
+                Debug.DrawRay(transform.position, player.transform.position - transform.position, Color.red);
+            }
+        }
     }
 }
