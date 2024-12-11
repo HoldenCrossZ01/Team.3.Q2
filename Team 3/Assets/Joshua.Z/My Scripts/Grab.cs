@@ -45,7 +45,7 @@ public class Grab : MonoBehaviour
 
             else if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
-                grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
+                grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
                 grabbedObject.transform.SetParent(null);
                 grabbedObject = null;
 
