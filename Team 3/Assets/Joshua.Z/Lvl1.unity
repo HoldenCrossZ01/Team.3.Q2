@@ -246,6 +246,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8319744312408928481, guid: cde0181fe0eac8f498e1d192738c8521, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8319744312408928482, guid: cde0181fe0eac8f498e1d192738c8521, type: 3}
       propertyPath: m_Name
       value: PlayerTemplate
