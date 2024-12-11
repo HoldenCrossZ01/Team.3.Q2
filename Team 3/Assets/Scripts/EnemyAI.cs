@@ -9,7 +9,7 @@ public class EnemyAI : MonoBehaviour
     public Transform target;
     
     private GameObject player;
-    private GameObject pathe;
+    [SerializeField] GameObject target1;
     [SerializeField] GameObject Cone;
     private bool hasLineOfSight = false;
 
@@ -36,7 +36,6 @@ public class EnemyAI : MonoBehaviour
         seeker.StartPath(rb.position, target.position, OnPathComplete);
         player = GameObject.FindGameObjectWithTag("Player");
         InvokeRepeating("UpdatePath", 0f, .5f);
-        pathe = GameObject.FindGameObjectWithTag("pathe");
     }
     
     void UpdatePath()
@@ -109,7 +108,7 @@ public class EnemyAI : MonoBehaviour
         }
         if (distance > distanceBetween)
         {
-            target = pathe.transform;
+            target = target1.transform;
             speed = 600;
             Cone.SetActive(true);
             distanceBetween = 3;
