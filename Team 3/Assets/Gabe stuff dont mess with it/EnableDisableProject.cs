@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class EnableDisableProject : MonoBehaviour
 {
+    public KeyCode phase = KeyCode.P;
+
     BoxCollider2D _col;
     private bool apple = true;
     void Start()
@@ -16,14 +18,14 @@ public class EnableDisableProject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (apple = true && Input.GetKeyDown("space"))
+        if (apple = true && Input.GetKeyDown(phase))
         {
             //_col.enabled = !_col.enabled;
             apple = false;
             this.gameObject.layer = LayerMask.NameToLayer("IgnoreCollisions");
             Debug.Log(apple);
         }
-        if (apple = true && Input.GetKeyDown(KeyCode.C))
+        if (apple = true && Input.GetKeyUp(phase))
         {
             Debug.Log(apple);
             this.gameObject.layer = LayerMask.NameToLayer("Default");

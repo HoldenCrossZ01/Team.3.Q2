@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class Grab : MonoBehaviour
 {
+
+
     [SerializeField]
     private Transform grabPoint;
 
@@ -16,6 +18,8 @@ public class Grab : MonoBehaviour
 
     private GameObject grabbedObject;
     private int layerIndex;
+
+    public KeyCode grab = KeyCode.O;
 
     private void Start()
     {
@@ -34,7 +38,7 @@ public class Grab : MonoBehaviour
         if (hitInfo.collider!=null && hitInfo.collider.gameObject.layer == layerIndex)
         {
 
-            if (Keyboard.current.spaceKey.wasPressedThisFrame && grabbedObject == null)
+            if (Input.GetKeyDown(grab) && grabbedObject == null)
             {
                 grabbedObject = hitInfo.collider.gameObject;
                 grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
@@ -43,7 +47,7 @@ public class Grab : MonoBehaviour
 
             }
 
-            else if (Keyboard.current.spaceKey.wasPressedThisFrame)
+            else if (Input.GetKeyUp(grab))
             {
                 grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
                 grabbedObject.transform.SetParent(null);
