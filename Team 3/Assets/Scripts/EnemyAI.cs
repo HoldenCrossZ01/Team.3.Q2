@@ -10,7 +10,14 @@ public class EnemyAI : MonoBehaviour
     
     private GameObject player;
     [SerializeField] GameObject target1;
+    public bool targe1Exist;
     [SerializeField] GameObject Cone;
+    [SerializeField] GameObject target2;
+    public bool targe2Exist;
+    [SerializeField] GameObject target3;
+    public bool targe3Exist;
+    [SerializeField] GameObject target4;
+    public bool targe4Exist;
     private bool hasLineOfSight = false;
 
     public float speed = 200f;
@@ -19,6 +26,7 @@ public class EnemyAI : MonoBehaviour
     
     
     public float distanceBetween;
+    private float distanced;
     private float distance;
 
 
@@ -97,21 +105,25 @@ public class EnemyAI : MonoBehaviour
             enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
         }
         
-        distance = Vector2.Distance(transform.position, player.transform.position);
-        if (distance < distanceBetween && hasLineOfSight)
+        distanced = Vector2.Distance(transform.position, player.transform.position);
+        if (distanced < distanceBetween && hasLineOfSight)
         {
             target = player.transform;
             distanceBetween = 7;
-            speed = 1200;
+            speed = 600;
             Cone.SetActive(false);
-
         }
-        if (distance > distanceBetween)
+
+        if (distanced > distanceBetween)
         {
             target = target1.transform;
             speed = 600;
             Cone.SetActive(true);
             distanceBetween = 3;
+            if (targe1Exist = true && distanced > distanceBetween) 
+            {
+                target = target2.transform;
+            }
         }
 
     }
