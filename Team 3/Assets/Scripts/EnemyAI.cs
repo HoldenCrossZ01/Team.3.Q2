@@ -11,14 +11,20 @@ public class EnemyAI : MonoBehaviour
     private GameObject player;
     [SerializeField] GameObject target1;
     public bool targe1Exist;
+    private float distance1;
     [SerializeField] GameObject Cone;
     [SerializeField] GameObject target2;
+    private float distance2;
     public bool targe2Exist;
     [SerializeField] GameObject target3;
     public bool targe3Exist;
+    private float distance3;
     [SerializeField] GameObject target4;
     public bool targe4Exist;
+    private float distance4;
     private bool hasLineOfSight = false;
+
+    public float Timer = 3.0f;
 
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
@@ -28,9 +34,10 @@ public class EnemyAI : MonoBehaviour
     public float distanceBetween;
     private float distanced;
     private float distance;
+    public float distancebetweentarget;
 
 
-    Path path;
+Path path;
     int currentWaypoint = 0;
     bool reachedEndOdPath = false;
 
@@ -79,7 +86,7 @@ public class EnemyAI : MonoBehaviour
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
-
+        distanced = Vector2.Distance(transform.position, player.transform.position);
         rb.AddForce(force);
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
@@ -105,12 +112,15 @@ public class EnemyAI : MonoBehaviour
             enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
         }
         
-        distanced = Vector2.Distance(transform.position, player.transform.position);
+        distance1 = Vector2.Distance(transform.position, player.transform.position);
+        distance2 = Vector2.Distance(transform.position, player.transform.position);
+        distance3 = Vector2.Distance(transform.position, player.transform.position);
+        distance4 = Vector2.Distance(transform.position, player.transform.position);
         if (distanced < distanceBetween && hasLineOfSight)
         {
             target = player.transform;
             distanceBetween = 7;
-            speed = 600;
+            speed = 1500;
             Cone.SetActive(false);
         }
 
@@ -119,10 +129,13 @@ public class EnemyAI : MonoBehaviour
             target = target1.transform;
             speed = 600;
             Cone.SetActive(true);
-            distanceBetween = 3;
-            if (targe1Exist = true && distanced > distanceBetween) 
+            distanceBetween = 4;
+            if (targe1Exist = true && distanced > distanceBetween && distance2 > distancebetweentarget) 
             {
-                target = target2.transform;
+               SpawnDelay();
+                     
+                    
+                   
             }
         }
 
@@ -143,4 +156,10 @@ public class EnemyAI : MonoBehaviour
             }
         }
     }
+    private IEnumerator SpawnDelay()
+    {
+        yield return new WaitForSeconds(3);
+        target = target2.transform;
+    }
+
 }
