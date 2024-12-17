@@ -16,7 +16,11 @@ namespace Pathfinding {
 	public class AIDestinationSetter : VersionedMonoBehaviour {
 		/// <summary>The object that the AI should move to</summary>
 		public Transform target;
-		IAstarAI ai;
+		public float DistanceBetween;
+        [SerializeField] GameObject Player;
+		private float distance;
+		private bool hasLineOfSight;
+       IAstarAI ai;
 
 		void OnEnable () {
 			ai = GetComponent<IAstarAI>();
@@ -33,7 +37,32 @@ namespace Pathfinding {
 
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () {
-			if (target != null && ai != null) ai.destination = target.position;
-		}
+            distance = Vector2.Distance(transform.position, Player.transform.position);
+            if (target != null && ai != null) ai.destination = target.position;
+		    if (DistanceBetween > distance)
+			{
+				target = Player.transform;
+			}
+
+
+            
+        }
+	
+	private void FixedUpdate()
+            {
+                RaycastHit2D ray = Physics2D.Raycast(transform.position, Player.transform.position - transform.position);
+                if (ray.collider != null)
+                {
+                    hasLineOfSight = ray.collider.CompareTag("Player");
+                    if (hasLineOfSight)
+                    {
+                        Debug.DrawRay(transform.position, Player.transform.position - transform.position, Color.green);
+                    }
+                    else
+                    {
+                        Debug.DrawRay(transform.position, Player.transform.position - transform.position, Color.red);
+                    }
+                }
+            }
 	}
 }

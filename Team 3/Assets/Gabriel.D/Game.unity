@@ -393,7 +393,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6223b3f749f8a1440b983758f23287fb, type: 3}
   m_Color: {r: 0.9827944, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -411,14 +411,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392895063}
-  m_LocalRotation: {x: -0.030780435, y: -0.005882023, z: -0.6973988, w: 0.71599793}
-  m_LocalPosition: {x: -2.17, y: -0.06999999, z: 0.20466502}
-  m_LocalScale: {x: 2.4133997, y: 2.8376997, z: 1}
+  m_LocalRotation: {x: 0.03097295, y: 0.004757522, z: 0.7064282, w: -0.7070908}
+  m_LocalPosition: {x: -0.05, y: 2.17, z: 1.16}
+  m_LocalScale: {x: 1.830487, y: 1.4426305, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1208455864}
+  m_Father: {fileID: 515758523}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: -2.997, y: 1.98, z: -88.544}
+  m_LocalEulerAnglesHint: {x: -2.896, y: 2.125, z: 270}
 --- !u!1 &515758520
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,13 +432,14 @@ GameObject:
   - component: {fileID: 515758521}
   - component: {fileID: 515758524}
   - component: {fileID: 515758525}
-  m_Layer: 0
+  - component: {fileID: 515758526}
+  m_Layer: 2
   m_Name: testing
-  m_TagString: Untagged
+  m_TagString: Destroy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &515758521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,7 +456,7 @@ MonoBehaviour:
   radius: 0.5
   height: 2
   canMove: 1
-  maxSpeed: 3
+  maxSpeed: 5
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -464,13 +465,13 @@ MonoBehaviour:
   repathRateCompatibility: NaN
   canSearchCompability: 0
   orientation: 1
-  enableRotation: 0
+  enableRotation: 1
   autoRepath:
     mode: 2
     interval: 0.5
     sensitivity: 10
     maximumInterval: 2
-    visualizeSensitivity: 0
+    visualizeSensitivity: 1
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
@@ -517,11 +518,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515758520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: -0.17466502}
+  m_LocalPosition: {x: 5.34, y: 5.59, z: -0.17466502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1560139093}
+  - {fileID: 392895065}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -538,7 +540,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  target: {fileID: 1052828886}
+  target: {fileID: 2064197143}
+  DistanceBetween: 4
+  Player: {fileID: 1052828881}
 --- !u!58 &515758525
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -555,6 +559,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &515758526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515758520}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e6c29e32504465faa943c537d8029b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  targets:
+  - {fileID: 0}
+  delay: 3
 --- !u!1 &608655028
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +771,7 @@ MonoBehaviour:
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -774,6 +794,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &705592719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 705592720}
+  m_Layer: 0
+  m_Name: path (4)
+  m_TagString: pathe
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &705592720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705592719}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.42, y: 5.74, z: -3.8600562}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &713288653
 GameObject:
@@ -1168,7 +1219,6 @@ Transform:
   - {fileID: 1685007644}
   - {fileID: 1098201493}
   - {fileID: 1556928960}
-  - {fileID: 392895065}
   m_Father: {fileID: 1807234917}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1495,7 +1545,7 @@ GameObject:
   - component: {fileID: 1560139093}
   - component: {fileID: 1560139092}
   - component: {fileID: 1560139094}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bad guy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1690,7 +1740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1807234913
 Rigidbody2D:
   serializedVersion: 4
@@ -1711,7 +1761,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!114 &1807234914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1737,7 +1787,7 @@ MonoBehaviour:
   targe4Exist: 1
   Timer: 3
   speed: 1500
-  nextWaypointDistance: 0.5
+  nextWaypointDistance: 1.2
   enemyGFX: {fileID: 1208455864}
   distanceBetween: 1
   distancebetweentarget: 4
@@ -2048,7 +2098,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064197142}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45575f99de5c3d448b60d54a33ed749a, type: 3}
   m_Name: 
@@ -2062,5 +2112,6 @@ MonoBehaviour:
   targe3Exist: 1
   target4: {fileID: 354258671}
   targe4Exist: 1
-  Tsuki: {fileID: 1807234912}
+  Tsuki: {fileID: 515758520}
+  target5: {fileID: 705592719}
   distanceBetween: 4

@@ -21,6 +21,7 @@ public class PACMAN : MonoBehaviour
     private float distance4;
     private bool hasLineOfSight = false;
     [SerializeField] GameObject Tsuki;
+    [SerializeField] GameObject target5;
 
     public float distanceBetween;
 
@@ -39,8 +40,40 @@ public class PACMAN : MonoBehaviour
 
         if (distance1 < distanceBetween)
         {
-            pacman = target2.transform;
-        }
+            StartCoroutine(yurina());
 
+        }
+        if (distance2 < distanceBetween)
+        {
+            StartCoroutine(emu());
+        }
+        if (distance3 < distanceBetween)
+        {
+            StartCoroutine(saffa());
+        }
+        if (distance4 < distanceBetween)
+        {
+            StartCoroutine(mimichu());
+        }
+    }
+    private IEnumerator yurina()
+    {
+        yield return new WaitForSeconds(3);
+        this.transform.position = target2.transform.position;
+    }
+    private IEnumerator emu()
+    {
+        yield return new WaitForSeconds(3);
+        this.transform.position = target3.transform.position;
+    }
+    private IEnumerator saffa()
+    {
+        yield return new WaitForSeconds(3);
+        this.transform.position = target4.transform.position;
+    }
+    private IEnumerator mimichu()
+    {
+        yield return new WaitForSeconds(3);
+        this.transform.position = target5.transform.position;
     }
 }

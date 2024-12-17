@@ -28,7 +28,7 @@ public class EnemyAI : MonoBehaviour
 
     public float Timer = 3.0f;
     public float speed = 200f;
-    public float nextWaypointDistance = 3f;
+    public float nextWaypointDistance = 0.5f;
     public Transform enemyGFX;
     
     
@@ -98,22 +98,22 @@ Path path;
             currentWaypoint++;
         }
 
-        if (rb.velocity.x >= 0.01f)
-        {
-            enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
-        }
-        else if (rb.velocity.x <= -0.01f)
-        {
-            enemyGFX.localScale = new Vector3(1f, 1f, 1f);
-        }
-        else if (rb.velocity.y >= 0.01f)
-        {
-            enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
-        }
-        else if (rb.velocity.y <= -0.01f) 
-        {
-            enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
-        }
+  //      if (rb.velocity.x >= 0.01f)
+  //      {
+  //          enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+  //      }
+  //      else if (rb.velocity.x <= -0.01f)
+  //      {
+   //         enemyGFX.localScale = new Vector3(1f, 1f, 1f);
+    //    }
+   //     else if (rb.velocity.y >= 0.01f)
+     //   {
+    //        enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+    //    }
+     //   else if (rb.velocity.y <= -0.01f) 
+     //   {
+       //     enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+      //  }
         
         distance1 = Vector2.Distance(transform.position, target1.transform.position);
         distance2 = Vector2.Distance(transform.position, target2.transform.position);
@@ -132,21 +132,21 @@ Path path;
 
         if (tsuki1 = true && distanced > distanceBetween)
         {
-           // target = target1.transform;
+            target = target1.transform;
             speed = 600;
             Cone.SetActive(true);
             distanceBetween = 4;
             tsuki1 =false;
         }
-        if (distance1 < distancebetweentarget && distanced > distanceBetween)
-        {
-            StartCoroutine (SpawnDelay());
+        //if (distance1 < distancebetweentarget && distanced > distanceBetween)
+     //   {
+      //      StartCoroutine (SpawnDelay());
 
-        }
-        if (tsuki1 = false && distanced < distanceBetween) 
-        { 
+     //   }
+        //if (tsuki1 = false && distanced < distanceBetween) 
+        //{ 
       //  target1 = 
-        }
+        //}
     }
     private void FixedUpdate()
     {
