@@ -7,11 +7,13 @@ using System.Runtime.InteropServices.WindowsRuntime;
 public class EnemyAI : MonoBehaviour
 {
     public Transform target;
-    
+    public Transform route;
+
     private GameObject player;
     [SerializeField] GameObject target1;
-    public bool targe1Exist;
     private float distance1;
+    public bool tsuki1;
+    private bool targe1Exist = true;
     [SerializeField] GameObject Cone;
     [SerializeField] GameObject target2;
     private float distance2;
@@ -25,7 +27,6 @@ public class EnemyAI : MonoBehaviour
     private bool hasLineOfSight = false;
 
     public float Timer = 3.0f;
-
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
     public Transform enemyGFX;
@@ -46,7 +47,9 @@ Path path;
 
     void Start()
     {
+        
         seeker = GetComponent<Seeker>();
+        tsuki1 = true ;
         rb = GetComponent<Rigidbody2D>();
         seeker.StartPath(rb.position, target.position, OnPathComplete);
         player = GameObject.FindGameObjectWithTag("Player");
@@ -112,33 +115,38 @@ Path path;
             enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
         }
         
-        distance1 = Vector2.Distance(transform.position, player.transform.position);
-        distance2 = Vector2.Distance(transform.position, player.transform.position);
-        distance3 = Vector2.Distance(transform.position, player.transform.position);
-        distance4 = Vector2.Distance(transform.position, player.transform.position);
+        distance1 = Vector2.Distance(transform.position, target1.transform.position);
+        distance2 = Vector2.Distance(transform.position, target2.transform.position);
+        distance3 = Vector2.Distance(transform.position, target3.transform.position);
+        distance4 = Vector2.Distance(transform.position, target4.transform.position);
+        targe1Exist = true;
+
         if (distanced < distanceBetween && hasLineOfSight)
         {
             target = player.transform;
             distanceBetween = 7;
             speed = 1500;
             Cone.SetActive(false);
+
         }
 
-        if (distanced > distanceBetween)
+        if (tsuki1 = true && distanced > distanceBetween)
         {
-            target = target1.transform;
+           // target = target1.transform;
             speed = 600;
             Cone.SetActive(true);
             distanceBetween = 4;
-            if (targe1Exist = true && distanced > distanceBetween && distance2 > distancebetweentarget) 
-            {
-               SpawnDelay();
-                     
-                    
-                   
-            }
+            tsuki1 =false;
         }
+        if (distance1 < distancebetweentarget && distanced > distanceBetween)
+        {
+            StartCoroutine (SpawnDelay());
 
+        }
+        if (tsuki1 = false && distanced < distanceBetween) 
+        { 
+      //  target1 = 
+        }
     }
     private void FixedUpdate()
     {

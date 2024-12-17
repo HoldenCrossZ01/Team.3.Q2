@@ -1725,8 +1725,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2064197143}
+  route: {fileID: 0}
   target1: {fileID: 2064197142}
-  targe1Exist: 1
+  tsuki1: 1
   Cone: {fileID: 392895063}
   target2: {fileID: 1661779926}
   targe2Exist: 1
@@ -1739,7 +1740,7 @@ MonoBehaviour:
   nextWaypointDistance: 0.5
   enemyGFX: {fileID: 1208455864}
   distanceBetween: 1
-  distancebetweentarget: 1
+  distancebetweentarget: 4
 --- !u!114 &1807234916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2017,6 +2018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2064197143}
+  - component: {fileID: 2064197144}
   m_Layer: 0
   m_Name: path
   m_TagString: pathe
@@ -2039,3 +2041,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2064197144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064197142}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45575f99de5c3d448b60d54a33ed749a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pacman: {fileID: 2064197143}
+  target1: {fileID: 2064197142}
+  targe1Exist: 1
+  target2: {fileID: 1661779926}
+  targe2Exist: 1
+  target3: {fileID: 1971226320}
+  targe3Exist: 1
+  target4: {fileID: 354258671}
+  targe4Exist: 1
+  Tsuki: {fileID: 1807234912}
+  distanceBetween: 4
