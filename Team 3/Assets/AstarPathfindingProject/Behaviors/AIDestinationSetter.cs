@@ -18,7 +18,8 @@ namespace Pathfinding {
 		public Transform target;
 		public float DistanceBetween;
         [SerializeField] GameObject Player;
-		private float distance;
+        [SerializeField] GameObject Pathway;
+        private float distance;
 		private bool hasLineOfSight;
        IAstarAI ai;
 
@@ -39,9 +40,13 @@ namespace Pathfinding {
 		void Update () {
             distance = Vector2.Distance(transform.position, Player.transform.position);
             if (target != null && ai != null) ai.destination = target.position;
-		    if (DistanceBetween > distance)
+		    if (hasLineOfSight && DistanceBetween > distance)
 			{
 				target = Player.transform;
+			}
+			if (DistanceBetween < distance)
+			{
+				target = Pathway.transform;
 			}
 
 
