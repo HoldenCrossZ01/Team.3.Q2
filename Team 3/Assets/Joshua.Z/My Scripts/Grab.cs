@@ -20,10 +20,15 @@ public class Grab : MonoBehaviour
     private int layerIndex;
 
     public KeyCode grab = KeyCode.O;
+    [SerializeField] GameObject hidden;
 
+    BoxCollider2D _col;
+    BoxCollider2D _coler;
     private void Start()
     {
         layerIndex = LayerMask.NameToLayer("GrabableObjects");
+        _col = hidden.gameObject.GetComponent<BoxCollider2D>();
+        _coler = gameObject.GetComponent<BoxCollider2D>();
     }
     
         
@@ -52,7 +57,7 @@ public class Grab : MonoBehaviour
                 grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
                 grabbedObject.transform.SetParent(null);
                 grabbedObject = null;
-
+                _coler.enabled = true;
             }
 
         }
