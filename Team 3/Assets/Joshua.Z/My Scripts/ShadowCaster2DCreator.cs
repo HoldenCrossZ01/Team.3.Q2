@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 using UnityEngine.Rendering.Universal;
+
 [RequireComponent(typeof(CompositeCollider2D))]
-public class TileShadow : MonoBehaviour
+public class ShadowCaster2DCreator : MonoBehaviour
 {
 
     [SerializeField]
@@ -18,13 +18,13 @@ public class TileShadow : MonoBehaviour
     static readonly FieldInfo shapePathHashField = typeof(ShadowCaster2D).GetField("m_ShapePathHash", BindingFlags.NonPublic | BindingFlags.Instance);
     static readonly MethodInfo generateShadowMeshMethod = typeof(ShadowCaster2D)
         .Assembly
-        .GetType("UnityEngine.Rednering.Universal.ShadowUtility")
+        .GetType("UnityEngine.Rendering.Universal.ShadowUtility")
         .GetMethod("GenerateShadowMesh", BindingFlags.Public | BindingFlags.Static);
 
     public void Create()
     {
 
-        //DestroyOldShadowCasters();
+        DestroyOldShadowCasters();
         tilemapCollider = GetComponent<CompositeCollider2D>();
 
         for (int i = 0; i < tilemapCollider.pathCount; i++)
@@ -42,7 +42,7 @@ public class TileShadow : MonoBehaviour
                 testPath[j] = pathVertices[j];
             }
 
-            //ShapePathField.SetValue(shadowCasterComponent, testPath);
+            shapePathField.SetValue(shadowCasterComponent, testPath);
             shapePathHashField.SetValue(shadowCasterComponent, Random.Range(int.MinValue, int.MaxValue));
             meshField.SetValue(shadowCasterComponent, new Mesh());
             generateShadowMeshMethod.Invoke(shadowCasterComponent, new object[] {meshField.GetValue(shadowCasterComponent), shapePathField.GetValue(shadowCasterComponent) });
@@ -50,6 +50,38 @@ public class TileShadow : MonoBehaviour
         }
 
     }
+    public void DestroyOldShadowCasters()
+    {
+        var tempList = transform.Cast<Transform>().ToList();
+        foreach (var child in tempList)
+        {
+            DestroyImmediate(child.gameObject);
+        }
 
+    }
 
+}
+
+[CustomEditor(typeof(ShadowCaster2DCreator))]
+public class ShadowCaster2DTileMapEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        
+        DrawDefaultInspector();
+
+        EditorGUILayout.BeginHorizontal();
+        if (GUILayout.Button("Create"))
+        {
+            var creator = (ShadowCaster2DCreator)target;
+            creator.Create();
+        }
+        if (GUILayout.Button("Remove Shadows"))
+        {
+            var creator = (ShadowCaster2DCreator)target;
+            creator.DestroyOldShadowCasters();
+        }
+        EditorGUILayout.EndHorizontal();
+
+    }
 }
