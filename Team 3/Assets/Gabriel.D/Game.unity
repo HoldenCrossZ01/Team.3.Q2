@@ -351,7 +351,6 @@ GameObject:
   - component: {fileID: 515758526}
   - component: {fileID: 515758528}
   - component: {fileID: 515758527}
-  - component: {fileID: 515758529}
   m_Layer: 2
   m_Name: testing
   m_TagString: Destroy
@@ -437,8 +436,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515758520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.34, y: 5.59, z: -0.17466502}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.4057, y: 2.7556, z: -0.17466502}
+  m_LocalScale: {x: 0.4111057, y: 0.32379273, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1560139093}
@@ -568,20 +567,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &515758529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515758520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 877a8c013e5449c4bbb73715e7698a57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 1560139096}
-  moveSpeed: 1
 --- !u!1 &608655028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,7 +1137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052828881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.48, y: -1.36, z: -1.63}
+  m_LocalPosition: {x: 2.73, y: 1.06, z: -1.63}
   m_LocalScale: {x: 1, y: 1.035, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2085,6 +2070,7 @@ GameObject:
   - component: {fileID: 1560139094}
   - component: {fileID: 1560139096}
   - component: {fileID: 1560139095}
+  - component: {fileID: 1560139097}
   m_Layer: 2
   m_Name: Bad guy
   m_TagString: Untagged
@@ -2200,6 +2186,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1560139097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560139091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877a8c013e5449c4bbb73715e7698a57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1560139096}
+  moveSpeed: 1
 --- !u!1 &1661779926
 GameObject:
   m_ObjectHideFlags: 0
