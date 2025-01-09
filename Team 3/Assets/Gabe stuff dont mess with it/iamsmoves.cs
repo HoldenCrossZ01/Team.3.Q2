@@ -4,77 +4,56 @@ using UnityEngine;
 
 public class iamsmoves : MonoBehaviour
 {
-    public Animator anim;
-
     public float moveSpeed;
-    private Rigidbody2D rb;
 
-    private float x;
-    private float y;
-    private float startposition;
+    public Rigidbody2D rb;
+
+    public float x;
+    public float y;
+
+    public Animator anim;
+    private bool moving;
+    
     private Vector2 input;
-    private bool Moving;
-    private Vector2 oldposition;
-    private Vector2 newposition;
-    void Start()
-    {
 
+    private void Start()
+    { 
+        rb = GetComponent<Rigidbody2D>();
     }
     private void Update()
     {
-
-
-        newposition = transform.position;
-
         GetInput();
-
-
-        Animate();
-        startposition = Vector2.Distance(newposition, oldposition);
-        oldposition = transform.position;
-
+        animate();
     }
-    private void FixedUpdate()
+    private void fixadeUpdate()
     {
         rb.velocity = input * moveSpeed;
     }
 
     private void GetInput()
     {
-        Vector2 velocity = newposition - oldposition;
-
-         x = Input.GetAxisRaw("Horizontal");
-         y = Input.GetAxisRaw("Vertical");
+        x = Input.GetAxisRaw("Horizontal");
+        y = Input.GetAxisRaw("vertical");
 
         input = new Vector2(x, y);
         input.Normalize();
     }
-    private void Animate()
+    private void animate()
     {
-        if (input.magnitude < 0.1f|| input.magnitude < -0.1f)
+        if (input.magnitude > 0.1f || input.magnitude < 0.1f)
         {
-            Moving = true;
+            moving = true;
         }
-        else { Moving = false; }
-
-        if (Moving)
-        {
-            anim.SetFloat("X", x);
-            anim.SetFloat("Y", y);
+        else { 
+        moving = false;
         }
 
-        anim.SetBool("Moving", Moving);
+        if (moving) { 
+            anim.SetFloat("x", x);
+            anim.SetFloat("y", y);
+        }
+
+        anim.SetBool("Moving", moving);
     }
 
-    private IEnumerator CheckMoving()
-    {
-        Vector3 startPos = this.gameObject.transform.position;
-        yield return new WaitForSeconds(1f);
-        Vector3 finalPos = this.gameObject.transform.position;
-
-        if (startPos.x != finalPos.x || startPos.y != finalPos.y
-            || startPos.z != finalPos.z)
-            Moving = true;
-
-    }
 }

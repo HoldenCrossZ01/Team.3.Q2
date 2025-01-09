@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: b1ef603766d6ea9438656a9405290733
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0376d29b803f9499a7c7bf9c219369
+      internalID: 637847226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ff012d94c3b4446ae21986f9ad8846
+      internalID: 1054971069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c447a229b7f5f4c90ff5188b34f4e7
+      internalID: -401480603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11648590290ad8f4aabfefcc7302d135
+      internalID: -655290334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad93a5fda7261246a28e15a996ee5e6
+      internalID: 1729688595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11558c2831b406c469e2661bc70b0562
+      internalID: -1097375076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84fb682e734e5ca45add16dcc82f55e0
+      internalID: -201414094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999c2e913fc631344bfe965022285119
+      internalID: 745294624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f341ebed4d01c74e962441b25072d5e
+      internalID: 397226636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1c18321883dd248ab422a578f4895d
+      internalID: 945106904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbadffb7b84b1f741b1ca7ddb8feefe1
+      internalID: -1713410583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b996b7d96889b8f4598868dd66b15fec
+      internalID: -418070858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37647d3182bc1e14ab3575d89e7e41d3
+      internalID: 1920374492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8e9156b54802b4cb126f8f123a4ae6
+      internalID: -692120177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 8400
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0dd819085958c40b96fc68f7b3565a
+      internalID: -726549139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8855d10cc29ab804fa6af4f7913f8b2b
+      internalID: -1563833594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 9600
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a7b0c61278a994b806ffc22e37556b
+      internalID: 1154098452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 10200
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625dcaecb2d5c984898f267b927a763d
+      internalID: -683698452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d1cc1704df1b54c8683ca23f6f6537
+      internalID: -5696635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_idle_left_Sprite_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 11400
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e87c47bc2a3f5247ab1143159107b5b
+      internalID: 1958475138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Haskell_A_Iam_idle_left_Sprite_sheet_12: 1920374492
+      Haskell_A_Iam_idle_left_Sprite_sheet_15: -1563833594
+      Haskell_A_Iam_idle_left_Sprite_sheet_14: -726549139
+      Haskell_A_Iam_idle_left_Sprite_sheet_1: 1054971069
+      Haskell_A_Iam_idle_left_Sprite_sheet_0: 637847226
+      Haskell_A_Iam_idle_left_Sprite_sheet_17: -683698452
+      Haskell_A_Iam_idle_left_Sprite_sheet_18: -5696635
+      Haskell_A_Iam_idle_left_Sprite_sheet_2: -401480603
+      Haskell_A_Iam_idle_left_Sprite_sheet_19: 1958475138
+      Haskell_A_Iam_idle_left_Sprite_sheet_13: -692120177
+      Haskell_A_Iam_idle_left_Sprite_sheet_9: 945106904
+      Haskell_A_Iam_idle_left_Sprite_sheet_11: -418070858
+      Haskell_A_Iam_idle_left_Sprite_sheet_4: 1729688595
+      Haskell_A_Iam_idle_left_Sprite_sheet_5: -1097375076
+      Haskell_A_Iam_idle_left_Sprite_sheet_10: -1713410583
+      Haskell_A_Iam_idle_left_Sprite_sheet_8: 397226636
+      Haskell_A_Iam_idle_left_Sprite_sheet_16: 1154098452
+      Haskell_A_Iam_idle_left_Sprite_sheet_6: -201414094
+      Haskell_A_Iam_idle_left_Sprite_sheet_3: -655290334
+      Haskell_A_Iam_idle_left_Sprite_sheet_7: 745294624
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
