@@ -33,20 +33,19 @@ public class iamsmoves : MonoBehaviour
     private void GetInput()
     {
         x = Input.GetAxisRaw("Horizontal");
-        y = Input.GetAxisRaw("vertical");
+        y = Input.GetAxisRaw("Vertical");
 
         input = new Vector2(x, y);
         input.Normalize();
     }
     private void animate()
     {
-        if (input.magnitude > 0.1f || input.magnitude < 0.1f)
+        if (input.magnitude > 0.1f || input.magnitude < -0.1f)
         {
             moving = true;
         }
         else { 
-        moving = false;
-        }
+        moving = false;}
 
         if (moving) { 
             anim.SetFloat("x", x);
