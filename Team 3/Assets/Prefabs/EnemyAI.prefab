@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 8129181580315698142}
   - component: {fileID: 8129181580315698137}
   m_Layer: 2
-  m_Name: testing (1)
+  m_Name: EnemyAI
   m_TagString: Destroy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

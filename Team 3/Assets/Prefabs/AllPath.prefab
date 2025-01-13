@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7454455583259702021}
   - component: {fileID: 7454455583259702139}
   m_Layer: 2
-  m_Name: testing
+  m_Name: AllPath
   m_TagString: Destroy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
