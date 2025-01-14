@@ -43,7 +43,7 @@ Transform:
   - {fileID: 7454455584614249523}
   - {fileID: 7454455583790724518}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7454455583259702016
 MonoBehaviour:
@@ -254,6 +254,8 @@ MonoBehaviour:
   rightlight: {fileID: 7454455583790724512}
   x: 0
   y: 0
+  x_math: 0
+  y_math: 0
 --- !u!1 &7454455583332414173
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7454455584304087023
 Transform:
   m_ObjectHideFlags: 0
