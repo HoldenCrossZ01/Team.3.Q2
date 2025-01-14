@@ -14,6 +14,8 @@ public class GuardsLightWork : MonoBehaviour
     private Vector2 newposition;
     public float x;
     public float y;
+    public float x_math;
+    public float y_math;
     // Update is called once per frame
     private void Start()
     {
@@ -29,23 +31,26 @@ public class GuardsLightWork : MonoBehaviour
         
         GetInput();
         
-        if (x < -1)
+        if (x <= -0.1 && y_math > x_math)
         {
             leftlight.SetActive(true);
             Uplight.SetActive(false);
             downlight.SetActive(false);
             rightlight.SetActive(false);
         }
-        else if (y < -1)
+        else if (y <= -0.1 && x_math > y_math)
         {
             downlight.SetActive(true);
             rightlight.SetActive(false);
             Uplight.SetActive(false);
             leftlight.SetActive(false);
         }
-        else if (x >= 1)
+        else if (x >= 0.1 && y_math > x_math)
         {
             rightlight.SetActive(true);
+            leftlight.SetActive(false);
+            Uplight.SetActive (false);
+            downlight.SetActive (false);
         }
 
 
@@ -59,6 +64,9 @@ public class GuardsLightWork : MonoBehaviour
         x = velocity.x; //fix
                         //  y = Input.GetAxisRaw("Vertical");
         y = velocity.y; //fix
+
+        y_math = x - y;
+        x_math = y - x;
     }
 
 }
