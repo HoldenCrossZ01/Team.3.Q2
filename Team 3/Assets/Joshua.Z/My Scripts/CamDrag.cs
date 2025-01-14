@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BagDrag : MonoBehaviour
+public class CamDrag : MonoBehaviour
 {
     public float speed;
     private Transform target;
@@ -12,7 +12,7 @@ public class BagDrag : MonoBehaviour
     {
         //target = GameObject..GetComponent<Transform>();
 
-        target = GameObject.FindGameObjectWithTag("BagDestination").GetComponent<Transform>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
    
