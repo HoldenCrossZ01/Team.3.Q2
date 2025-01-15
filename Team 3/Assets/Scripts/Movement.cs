@@ -69,8 +69,6 @@ public class Movement : MonoBehaviour
             _rb.velocity = Vector3.zero;
             _rb.angularVelocity = 0.0f;
             SceneManager.LoadScene("gameover");
-            Destroy(this.gameObject);
-            this.gameObject.SetActive(false);
         }
     }
 }

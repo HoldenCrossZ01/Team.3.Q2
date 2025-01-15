@@ -8,13 +8,18 @@ public class SceneLoader : MonoBehaviour
     // Start is called before the first frame update
     public void LoadLevel1()
     {
-        SceneManager.LoadScene("GameLevelOne");
+        SceneManager.LoadScene("Tutorial.I");
+    }
+    public void gameoverload() 
+    {
+        SceneManager.LoadScene("Tutorial.I");
+
     }
     public void title()
     {
         SceneManager.LoadScene("Title");
     }
-
+    
 
     public void GetOut()
     {
