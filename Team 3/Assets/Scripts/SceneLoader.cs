@@ -10,6 +10,12 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("GameLevelOne");
     }
+    public void title()
+    {
+        SceneManager.LoadScene("Title");
+    }
+
+
     public void GetOut()
     {
         Application.Quit();
