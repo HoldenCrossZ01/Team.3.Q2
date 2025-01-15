@@ -8,6 +8,9 @@ TagManager:
   - Destroy
   - pathe
   - dont kill
+  - BagDestination
+  - ToFollow
+  - Possessable
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - GrabableObjects
   - Lightswork
   - GrabableObjectscollider
-  - 
+  - Possessable
   - 
   - 
   - 

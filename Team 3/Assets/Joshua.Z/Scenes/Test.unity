@@ -1249,6 +1249,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5141170516128521490, guid: cde0181fe0eac8f498e1d192738c8521, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8319744312408928482, guid: cde0181fe0eac8f498e1d192738c8521, type: 3}
       propertyPath: m_Name
       value: PlayerTemplate
@@ -1330,7 +1334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1206255906
 Transform:
   m_ObjectHideFlags: 0
@@ -1969,7 +1973,7 @@ GameObject:
   - component: {fileID: 2031255366}
   - component: {fileID: 2031255365}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Bag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1987,7 +1991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7552237a2339b534ba8104149cdffdcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 3
 --- !u!212 &2031255366
 SpriteRenderer:
   m_ObjectHideFlags: 0
