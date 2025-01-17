@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 752887bca4e49c84f954ba5d9e7f938e
+guid: d341f692d9f33d147b9516e1029796aa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,28 +129,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: CodasTileMapExtras(WALLS)_0
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 226
-        width: 1153
-        height: 574
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62e60eaba8947c945922151012361381
-      internalID: -1833320148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -161,8 +140,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      CodasTileMapExtras(WALLS)_0: -1833320148
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
