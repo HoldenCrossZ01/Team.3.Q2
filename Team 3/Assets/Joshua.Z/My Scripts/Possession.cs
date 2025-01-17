@@ -8,49 +8,64 @@ public class Possession : MonoBehaviour
     public LayerMask Layer;
     public bool CanPossessIam;
     public bool CanPossessElse;
-
+    public bool IsCurrentlyPossessed;
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        var hits = Physics2D.CircleCastAll(transform.position, Radius, Vector2.zero, 0, Layer);
+
+        // Only for objects.
+        if (IsCurrentlyPossessed && CanPossessIam == true)
         {
-            if (CanPossessIam == true)
+            if (Input.GetKeyDown(KeyCode.Q))
             {
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+
                 Debug.Log("Pressing Space");
 
-                var hit = Physics2D.CircleCast(transform.position, Radius, Vector2.zero, 0, Layer);
+                Debug.Log("Possessed");
 
-                if (hit && GameObject.FindGameObjectWithTag("Player") && hit.transform.TryGetComponent(out PlayerCtrlLectI control) && hit.transform != transform)
-                {
-                    Debug.Log("Possessed");
+                player.GetComponent<PlayerCtrlLectI>().enabled = true;
+                GetComponent<PlayerCtrlLectI>().enabled = false;
 
-                    control.enabled = true;
-                    GetComponent<PlayerCtrlLectI>().enabled = false;
-
-                }
+                IsCurrentlyPossessed = false;
+                player.GetComponent<Possession>().IsCurrentlyPossessed = true;
+                FindObjectOfType<CamDrag>().target = player.transform;
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        foreach (var hit in hits)
         {
-            if (CanPossessElse == true)
+            if (hit.transform == transform)
+                continue;
+
+            // Only for Iam.
+            if (IsCurrentlyPossessed && CanPossessElse == true)
             {
-                Debug.Log("Pressing Space");
-
-                var hit = Physics2D.CircleCast(transform.position, Radius, Vector2.zero, 0, Layer);
-
-                if (hit && GameObject.FindGameObjectWithTag("PossessableObject") && hit.transform.TryGetComponent(out PlayerCtrlLectI control) && hit.transform != transform)
+                if (hit.transform.TryGetComponent(out ParticleSystem particleSystem))
                 {
-                    Debug.Log("Possessed");
+                    particleSystem.Emit(1);
+                }
 
-                    control.enabled = true;
-                    GetComponent<PlayerCtrlLectI>().enabled = false;
+                if (hit.transform.CompareTag("PossessableObject") && hit.transform.TryGetComponent(out PlayerCtrlLectI control))
+                {
+                    if (Input.GetKeyUp(KeyCode.Space))
+                    {
+                        Debug.Log("Pressing Space");
 
+                        Debug.Log("Possessed");
+
+                        control.enabled = true;
+                        GetComponent<PlayerCtrlLectI>().enabled = false;
+
+                        IsCurrentlyPossessed = false;
+                        hit.transform.gameObject.GetComponent<Possession>().IsCurrentlyPossessed = true;
+
+                        FindObjectOfType<CamDrag>().target = hit.transform;
+                    }
                 }
             }
         }
-
-
     }
 
 

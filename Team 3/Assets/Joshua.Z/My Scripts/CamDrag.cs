@@ -7,7 +7,7 @@ public class CamDrag : MonoBehaviour
     public float speed;
     public Vector3 offset;
 
-    private Transform target;
+    public Transform target;
     //public GameObject ToFollow;
 
     void Start()
