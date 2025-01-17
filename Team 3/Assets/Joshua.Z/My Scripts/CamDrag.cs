@@ -5,6 +5,8 @@ using UnityEngine;
 public class CamDrag : MonoBehaviour
 {
     public float speed;
+    public Vector3 offset;
+
     private Transform target;
     //public GameObject ToFollow;
 
@@ -18,6 +20,6 @@ public class CamDrag : MonoBehaviour
    
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, target.position + offset, speed * Time.deltaTime);
     }
 }

@@ -20,4 +20,5 @@ public class BagDrag : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
+   
 }
