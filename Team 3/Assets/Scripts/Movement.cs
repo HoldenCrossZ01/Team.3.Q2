@@ -70,6 +70,7 @@ public class Movement : MonoBehaviour
             _rb.angularVelocity = 0.0f;
             SceneManager.LoadScene("gameover");
         }
+
     }
 }
 

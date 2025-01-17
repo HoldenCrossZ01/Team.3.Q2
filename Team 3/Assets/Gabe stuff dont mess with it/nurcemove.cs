@@ -11,6 +11,7 @@ public class nurcemove : MonoBehaviour
 
     private float x;
     private float y;
+    private bool Possesed;
     private float startposition;
     private Vector2 input;
     private bool Moving;
@@ -25,13 +26,14 @@ public class nurcemove : MonoBehaviour
 
         newposition = transform.position;
 
+        
         GetInput();
 
-
+        possesion();
         Animate();
+        
         startposition = Vector2.Distance(newposition, oldposition);
         oldposition = transform.position;
-
     }
     private void FixedUpdate()
     {
@@ -43,16 +45,15 @@ public class nurcemove : MonoBehaviour
         Vector2 velocity = newposition - oldposition;
 
         // x = Input.GetAxisRaw("Horizontal");
-        x = velocity.x; //fix
-                        //  y = Input.GetAxisRaw("Vertical");
-        y = velocity.y; //fix
+        x = Input.GetAxisRaw("Horizontal");
+        y = Input.GetAxisRaw("Vertical");
 
         input = new Vector2(x, y);
         input.Normalize();
     }
     private void Animate()
     {
-        if (newposition != oldposition) //|| input.magnitude < -0.1f)
+        if (input.magnitude > 0.1f || input.magnitude < -0.1f) //|| input.magnitude < -0.1f)
         {
             Moving = true;
         }
@@ -65,5 +66,15 @@ public class nurcemove : MonoBehaviour
         }
 
         anim.SetBool("Moving", Moving);
+
+
+    }
+    private void possesion()
+    {
+        anim.SetBool("possesed", Possesed);
+        if (Input.GetKey(KeyCode.L))
+        {
+            Possesed = true;
+        }
     }
 }

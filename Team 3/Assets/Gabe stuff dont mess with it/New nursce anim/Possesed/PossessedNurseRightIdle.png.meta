@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 315cb44692d309a4fbfa043aab7e9d4e
+guid: 946fed06aa28cb240a54ff58a03a8a94
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,7 +131,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NursePossessedWalkDown_0
+      name: PossessedNurseRightIdle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9adde4ed37cb5a40bfc94ebfc04d69b
-      internalID: -244108831
+      spriteID: e16180d4fda0f1449ad407b63000799b
+      internalID: 1622006719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NursePossessedWalkDown_1
+      name: PossessedNurseRightIdle_1
       rect:
         serializedVersion: 2
         x: 980
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65491b5cf0f3652419bfadbf98d69880
-      internalID: 1811267349
+      spriteID: be37aec4a84f2a544a63a5345985b7d2
+      internalID: -279912748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NursePossessedWalkDown_2
+      name: PossessedNurseRightIdle_2
       rect:
         serializedVersion: 2
         x: 1960
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc759e926d988ee4bb900a73b1961f54
-      internalID: -1875027075
+      spriteID: 6ea1a15ef3f05b142ba545e136d3b05b
+      internalID: -548470208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NursePossessedWalkDown_3
+      name: PossessedNurseRightIdle_3
       rect:
         serializedVersion: 2
         x: 2940
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c78c4dc4c6fb3b4a8cf9eb206f91cbd
-      internalID: 583326693
+      spriteID: 961a7044d60dd9c46bbd2c5b1f175834
+      internalID: 1499795943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NursePossessedWalkDown_4
+      name: PossessedNurseRightIdle_4
       rect:
         serializedVersion: 2
         x: 3920
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6033114e4e45c7b4cb388705abfb6b8c
-      internalID: -920925892
+      spriteID: 0f34640ccbf47144389537a1a0594103
+      internalID: -931315815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NursePossessedWalkDown_5
+      name: PossessedNurseRightIdle_5
       rect:
         serializedVersion: 2
         x: 4900
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c8ae7b7901ff6d48bd310af56e0c2b3
-      internalID: -424203583
+      spriteID: e9473be566cd26c48af59dc5d8667cd5
+      internalID: -45836507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NursePossessedWalkDown_6
+      name: PossessedNurseRightIdle_6
       rect:
         serializedVersion: 2
         x: 5880
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a70bee9668d2ba244b52864e624bbd67
-      internalID: 1215847798
+      spriteID: a451babd22b91984bbc712fca3607814
+      internalID: 1342927013
       vertices: []
       indices: 
       edges: []
@@ -288,13 +288,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NursePossessedWalkDown_0: -244108831
-      NursePossessedWalkDown_6: 1215847798
-      NursePossessedWalkDown_3: 583326693
-      NursePossessedWalkDown_1: 1811267349
-      NursePossessedWalkDown_4: -920925892
-      NursePossessedWalkDown_2: -1875027075
-      NursePossessedWalkDown_5: -424203583
+      PossessedNurseRightIdle_2: -548470208
+      PossessedNurseRightIdle_6: 1342927013
+      PossessedNurseRightIdle_0: 1622006719
+      PossessedNurseRightIdle_5: -45836507
+      PossessedNurseRightIdle_4: -931315815
+      PossessedNurseRightIdle_1: -279912748
+      PossessedNurseRightIdle_3: 1499795943
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
