@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 315cb44692d309a4fbfa043aab7e9d4e
+guid: f9049f7b3958eb043a841e4cd82d54d1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NursePossessedWalkDown_0
+      name: Haskell_A_Iam_Possession_left_sprite_sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 980
-        height: 1300
+        width: 600
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9adde4ed37cb5a40bfc94ebfc04d69b
-      internalID: -244108831
+      spriteID: 00fd4ecb77bcc3445a76804580bed034
+      internalID: 1050777950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NursePossessedWalkDown_1
+      name: Haskell_A_Iam_Possession_left_sprite_sheet_1
       rect:
         serializedVersion: 2
-        x: 980
+        x: 600
         y: 0
-        width: 980
-        height: 1300
+        width: 600
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65491b5cf0f3652419bfadbf98d69880
-      internalID: 1811267349
+      spriteID: 932ac90b87a1b744797194f996d5a83f
+      internalID: 50924799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NursePossessedWalkDown_2
+      name: Haskell_A_Iam_Possession_left_sprite_sheet_2
       rect:
         serializedVersion: 2
-        x: 1960
+        x: 1200
         y: 0
-        width: 980
-        height: 1300
+        width: 600
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc759e926d988ee4bb900a73b1961f54
-      internalID: -1875027075
+      spriteID: a4d3ffe79c4c9ca47b7fb9156bc566fa
+      internalID: 1292269806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NursePossessedWalkDown_3
+      name: Haskell_A_Iam_Possession_left_sprite_sheet_3
       rect:
         serializedVersion: 2
-        x: 2940
+        x: 1800
         y: 0
-        width: 980
-        height: 1300
+        width: 600
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c78c4dc4c6fb3b4a8cf9eb206f91cbd
-      internalID: 583326693
+      spriteID: 926d460ec83b45947afd6b64f90bc118
+      internalID: -32674203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NursePossessedWalkDown_4
+      name: Haskell_A_Iam_Possession_left_sprite_sheet_4
       rect:
         serializedVersion: 2
-        x: 3920
+        x: 2400
         y: 0
-        width: 980
-        height: 1300
+        width: 600
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6033114e4e45c7b4cb388705abfb6b8c
-      internalID: -920925892
+      spriteID: 9e0df145f55cf6c49ae19a67417a00b8
+      internalID: -547653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NursePossessedWalkDown_5
+      name: Haskell_A_Iam_Possession_left_sprite_sheet_5
       rect:
         serializedVersion: 2
-        x: 4900
+        x: 3000
         y: 0
-        width: 980
-        height: 1300
+        width: 600
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c8ae7b7901ff6d48bd310af56e0c2b3
-      internalID: -424203583
+      spriteID: fb8c9157357fbd944a99aed883ea3eeb
+      internalID: -297457332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NursePossessedWalkDown_6
+      name: Haskell_A_Iam_Possession_left_sprite_sheet_6
       rect:
         serializedVersion: 2
-        x: 5880
+        x: 3600
         y: 0
-        width: 980
-        height: 1300
+        width: 600
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +271,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a70bee9668d2ba244b52864e624bbd67
-      internalID: 1215847798
+      spriteID: ad6a015a423d6124ea9a18bfd3877670
+      internalID: 831449069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haskell_A_Iam_Possession_left_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 0
+        width: 600
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8fe735eca5e45488636bffdc640e8b
+      internalID: 219585548
       vertices: []
       indices: 
       edges: []
@@ -288,13 +309,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NursePossessedWalkDown_0: -244108831
-      NursePossessedWalkDown_6: 1215847798
-      NursePossessedWalkDown_3: 583326693
-      NursePossessedWalkDown_1: 1811267349
-      NursePossessedWalkDown_4: -920925892
-      NursePossessedWalkDown_2: -1875027075
-      NursePossessedWalkDown_5: -424203583
+      Haskell_A_Iam_Possession_left_sprite_sheet_7: 219585548
+      Haskell_A_Iam_Possession_left_sprite_sheet_1: 50924799
+      Haskell_A_Iam_Possession_left_sprite_sheet_4: -547653
+      Haskell_A_Iam_Possession_left_sprite_sheet_5: -297457332
+      Haskell_A_Iam_Possession_left_sprite_sheet_0: 1050777950
+      Haskell_A_Iam_Possession_left_sprite_sheet_2: 1292269806
+      Haskell_A_Iam_Possession_left_sprite_sheet_6: 831449069
+      Haskell_A_Iam_Possession_left_sprite_sheet_3: -32674203
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

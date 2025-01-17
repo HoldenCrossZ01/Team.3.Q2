@@ -5,6 +5,7 @@ using UnityEngine;
 public class Teleportinglikecrazy : MonoBehaviour
 {
     public Transform mizuki;
+    [SerializeField] GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,11 @@ public class Teleportinglikecrazy : MonoBehaviour
     void Update()
     {
     this.gameObject.transform.position = mizuki.position;
+        if (Input.GetKey(KeyCode.L))
+        {
+            mizuki = player.transform;
+
+        }
     }
 
 }

@@ -19,10 +19,30 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Title");
     }
-    
 
+    public void credits()
+    {
+        SceneManager.LoadScene("credits");
+    }
     public void GetOut()
     {
         Application.Quit();
+    }
+    public void Joshua()
+    {
+        SceneManager.LoadScene("1");
+    }
+    public void Alice()
+    {
+        SceneManager.LoadScene("2");
+    }
+    public void Coda()
+    {
+        SceneManager.LoadScene("3");
+    }
+    public void Kenny()
+    {
+        SceneManager.LoadScene("4");
+
     }
 }

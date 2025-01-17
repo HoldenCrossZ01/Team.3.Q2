@@ -24,6 +24,10 @@ public class iamsmoves : MonoBehaviour
     {
         GetInput();
         animate();
+        if (1 == 1)
+        {
+
+        }
     }
     private void fixadeUpdate()
     {
