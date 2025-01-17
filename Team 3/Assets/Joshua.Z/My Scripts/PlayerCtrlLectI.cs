@@ -9,6 +9,7 @@ public class PlayerCtrlLectI : MonoBehaviour
     public float moveSpeed;
 
     private Rigidbody2D rb;
+    private Animator _anim;
 
     private float x;
     private float y;
@@ -18,6 +19,7 @@ public class PlayerCtrlLectI : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        _anim = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -34,6 +36,10 @@ public class PlayerCtrlLectI : MonoBehaviour
 
         input = new Vector2(x, y);
         input.Normalize();
+
+        _anim.SetFloat("X", x);
+        _anim.SetFloat("Y", y);
+        _anim.SetBool("Moving", input.magnitude > 0);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

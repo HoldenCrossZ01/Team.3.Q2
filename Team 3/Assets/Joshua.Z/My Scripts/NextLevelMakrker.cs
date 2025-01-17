@@ -8,7 +8,7 @@ public class NextLevelMakrker : MonoBehaviour
     public string sceneToLoad;
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Bag"))
+        if (other.gameObject.CompareTag("Player"))
         {
            SceneManager.LoadScene(sceneToLoad);
         }

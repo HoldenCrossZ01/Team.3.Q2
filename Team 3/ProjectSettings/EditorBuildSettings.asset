@@ -26,4 +26,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Gabriel.D/gameover.unity
     guid: ee2322e5286c36547abb4130b2a63e4f
+  - enabled: 1
+    path: Assets/Gabriel.D/1.unity
+    guid: 4c4f401b438f20f43806134ecc25dbea
+  - enabled: 1
+    path: Assets/Gabriel.D/2.unity
+    guid: ce8ea2dc95595524abe7afe31c47f151
+  - enabled: 1
+    path: Assets/Gabriel.D/3.unity
+    guid: c2d9178c18bec444289b9807a3397662
+  - enabled: 1
+    path: Assets/Gabriel.D/4.unity
+    guid: 5533e55f604290e41816faa85f2d89ba
+  - enabled: 1
+    path: Assets/Gabriel.D/Credits.unity
+    guid: 0b0f268accf68a145ba4dde83a4b1b72
   m_configObjects: {}
