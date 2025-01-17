@@ -6,33 +6,78 @@ public class Possession : MonoBehaviour
 {
    public float Radius = 1f;
     public LayerMask Layer;
+    public bool CanPossessIam;
+    public bool CanPossessElse;
+
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-            var hit = Physics2D.CircleCast(transform.position, Radius, Vector2.zero, 0, Layer);
-
-            if (hit && hit.transform.TryGetComponent(out PlayerCtrlLectI control))
+            if (CanPossessIam == true)
             {
-                control.enabled = true;
-                GetComponent<PlayerCtrlLectI>().enabled = false;
+                Debug.Log("Pressing Space");
+
+                var hit = Physics2D.CircleCast(transform.position, Radius, Vector2.zero, 0, Layer);
+
+                if (hit && GameObject.FindGameObjectWithTag("Player") && hit.transform.TryGetComponent(out PlayerCtrlLectI control) && hit.transform != transform)
+                {
+                    Debug.Log("Possessed");
+
+                    control.enabled = true;
+                    GetComponent<PlayerCtrlLectI>().enabled = false;
+
+                }
             }
-
-            //if (Input.GetKeyUp(KeyCode.L))
-            //{
-            //    control.enabled = false;
-            //    GetComponent<PlayerCtrlLectI>().enabled = true;
-            //}
-
         }
 
-        
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            if (CanPossessElse == true)
+            {
+                Debug.Log("Pressing Space");
+
+                var hit = Physics2D.CircleCast(transform.position, Radius, Vector2.zero, 0, Layer);
+
+                if (hit && GameObject.FindGameObjectWithTag("PossessableObject") && hit.transform.TryGetComponent(out PlayerCtrlLectI control) && hit.transform != transform)
+                {
+                    Debug.Log("Possessed");
+
+                    control.enabled = true;
+                    GetComponent<PlayerCtrlLectI>().enabled = false;
+
+                }
+            }
+        }
+
 
     }
+
+
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, Radius);
     }
+
+    //Debug.Log("Pressing Space");
+
+    //var hit = Physics2D.CircleCast(transform.position, Radius, Vector2.zero, 0, Layer);
+
+    //if (hit && GameObject.FindGameObjectWithTag("Player") && hit.transform.TryGetComponent(out PlayerCtrlLectI control) && hit.transform != transform)
+    //{
+    //    Debug.Log("Possessed");
+
+    //    control.enabled = true;
+    //    GetComponent<PlayerCtrlLectI>().enabled = false;
+
+
+    //}
+
+    //if (Input.GetKeyUp(KeyCode.L))
+    //{
+    //    control.enabled = false;
+    //    GetComponent<PlayerCtrlLectI>().enabled = true;
+    //}
+
 }
